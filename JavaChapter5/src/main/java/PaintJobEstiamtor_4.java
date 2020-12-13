@@ -22,8 +22,6 @@ import java.util.Scanner;
 // Cost of labor x
 // Total cost of the job
 
-// Algorithm Layout
-// Ask user for number of rooms, square feet for each room, total square feet
 public class PaintJobEstiamtor_4 {
     
     public static void main(String[] args) {
@@ -43,25 +41,22 @@ public class PaintJobEstiamtor_4 {
             System.out.println("Enter the number of square feet or room " + counter);
             totalSquareFeet += keyboard.nextDouble();}
         
-        gallonsNeededAndCost(totalSquareFeet, costOfPaintPerGallon);
-        hoursOfLaborNeededAndCost(laborPerHour, totalSquareFeet);
+        calculateJob(totalSquareFeet, costOfPaintPerGallon, laborPerHour);
+        
     }
 
-    public static void gallonsNeededAndCost(double totalSquareFeet, double costOfPaintPerGallon){
+    public static void calculateJob(double totalSquareFeet, double costOfPaintPerGallon, double laborPerHour){
         double gallonsNeeded = totalSquareFeet/115;
         System.out.println("The gallons of paint needed is: " + gallonsNeeded);
         double costOfPaint = gallonsNeeded * costOfPaintPerGallon;
         System.out.println("The cost of paint is: $ " + costOfPaint);
-    }
-    
-    public static void hoursOfLaborNeededAndCost(double laborPerHour, double totalSquareFeet){
         double laborHoursNeeded = (totalSquareFeet/115) * 8;
         System.out.println("The number of labor hours needed is: " + laborHoursNeeded);
         double laborCost = laborPerHour * laborHoursNeeded;
         System.out.println("The cost of labor is: $ " + laborCost);
+        double totalJobCost = costOfPaint + laborCost;
+        System.out.println("The total amount of the job is : $ " + totalJobCost);
     }
     
-    public static void costOfPaint(){
-        
-    }
+
 }
