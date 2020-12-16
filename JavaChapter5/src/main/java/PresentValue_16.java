@@ -21,7 +21,7 @@ public class PresentValue_16 {
         futureValue = keyboard.nextDouble();
         System.out.println("Enter the number of years that money will be accumulating. ");
         numberOfYears = keyboard.nextDouble();
-        System.out.println("Enter the annual interest rate of the account. ");
+        System.out.println("Enter the annual interest rate of the account (in decimal format). ");
         annualInterestRate = keyboard.nextDouble();
         
         presentValue(futureValue, annualInterestRate, numberOfYears);
